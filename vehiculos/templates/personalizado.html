@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+	{%load staticfiles %}
+	<link rel="stylesheet" href="{% static 'estilos/personalizado.css' %}">
+{% endblock %}
+{% block cuerpo %}
+	<div class="container configuracion">
+		<h1>Configuración</h1>
+	</div>
+	<div class="container centro">
+		<div class="row">
+			<div class="col-md-6"><img src="{{c.foto.url}}" class="coche" /></div>
+			<div class="col-md-6">
+				<table class="datos">
+					<tr>
+						<td><img src="{{c.id_fabricante.logo.url}}" class="marcaCoche" /></td>
+						<td><h1>{{c.id_fabricante.nombre}}</h1></td>
+					</tr>
+					<tr>
+						<td><h2>{{c.nombre}}</h2></td>
+						<td><h2>{{c.anyo_salida}}</h2></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<form id='formulario' method="post" class="formularioConfig">
+								{% csrf_token %}
+								{{ form|crispy }}
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><h4>{{c.precio}} €</h4></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div class="form-group botones">
+								<input type="submit" class="btn" value="Enviar">
+							</div>
+						</td>
+							</form>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block head %}
+	{%load staticfiles %}
+	<link rel="stylesheet" href="{% static 'estilos/login.css' %}">		
+{% endblock %}
+{% block cuerpo %}
+<div class="container">
+  <div class="row">
+  	<form action="{% url 'InicioSesion' %}" method="post">
+  		{% csrf_token %}
+  		{{ form|crispy }}
+    	<input type="submit" value="enviar">
+    </form>
+  </div>
+</div>
+{% endblock %}

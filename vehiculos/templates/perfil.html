@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block head %}
+	{%load staticfiles %}
+	<link rel="stylesheet" href="{% static 'estilos/perfil.css' %}">
+			
+{% endblock %}
+
+{% block cuerpo %}
+<div class="container-fluid contenido">
+	<div class="container datos">
+		<div class="tituloverde">
+			<h1>Bienvenido {{u.nombre}}</h1>		
+		</div>
+		<table class="informacion">
+			<tr>
+				<td rowspan="4">
+					{% if u.foto %}
+						<img src="{{u.foto.url}}" class="perfil" />
+					{% endif %}
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3>{{u.nombre}} {{u.apellidos}}</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h4>Edad - {{u.edad}}</h4>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h4>{{u.correo}}</h4 >
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><a href="usuario_coche/" class="btn btn-default botonCoche">ver Coches</a></td>
+			</tr>
+		</table>
+		<div class="tituloverde">
+			<a href="../nuevaDireccion" class="btn btn-default boton">Añadir dirección nueva</a>
+			<h1>Direcciones</h1>
+		</div>
+		<table class="informacion">
+
+			<tr>
+				<th>Calle</th>
+				<th>Provincia</th>
+				<th>Pais</th>
+				<th>Localidad</th>
+			</tr>
+			{% for o in d %}
+				<tr>
+					<td>{{o.calle}}</td>
+					<td>{{o.provincia}}</td>
+					<td>{{o.pais}}</td>
+					<td>{{o.localidad}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	
+	
+</div>
+{% endblock %}
+

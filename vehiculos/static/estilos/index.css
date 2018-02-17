@@ -1,0 +1,35 @@
+
+.derecha{
+	text-align: right;
+}
+.tablaCabecera{
+	width: 70%;
+	margin-left: 15%;
+}
+.tablaCabecera img{
+  width: 70%;
+}
+.cabecera{
+	margin-top: -20px;
+	background-color: rgb(0,64,32);
+	color: white;
+	text-align: center;
+}
+
+
+  .secciones{
+    text-align: center;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 2% 5% 2% 5%;
+    margin-top: 5%;
+    color: white;
+  }
+  .simagen{
+    width: 100%;
+    margin-top: 50px; 
+    border-radius: 10px;
+  }
+  .descrip{
+    padding: 10%;
+  }

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+	{%load staticfiles %}
+	<link rel="stylesheet" href="{% static 'estilos/contacto.css' %}">
+			
+{% endblock %}
+
+{% block cuerpo %}
+<section class="contenido">
+    <div class="container">
+        <div class="container titulo">
+            <h1>¿Podemos ayudarle en algo?</h1>
+        </div>
+        <div class="container">
+            <form id='formulario' method="post">
+  					{% csrf_token %}
+                    {{ form|crispy }}
+                <div class="form-group botones">
+                    <input type="submit" class="btn" value="Enviar">
+                    <input type="reset" class="btn" value="Limpiar">
+                </div>
+            </form>
+            <div class="container mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d953.3551781811884!2d-6.278359382540419!3d36.51331694556494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1517490047135" frameborder="0" height="250" width="100%" style="border:0" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

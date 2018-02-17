@@ -1,0 +1,14 @@
+.formulario{
+	margin-top: 5%;
+	width: 50%;
+}
+
+.formulario h1{
+	text-align: center;
+	font-size: 50px;
+}
+
+.boton{
+	color: white;
+	background-color: #004020;
+}

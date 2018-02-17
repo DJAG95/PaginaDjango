@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block head %}
+	{%load staticfiles %}
+	<link rel="stylesheet" href="{% static 'estilos/concesionario.css' %}">
+{% endblock %}
+{% block cuerpo %}
+		<div class="portada">
+			<img src="{% static 'img/bosque.jpg' %}" alt="">
+			<img src="{{marca.logo.url}}" alt="Marca del vehículo" class="logoInicialMarca">
+			<h1>{{marca.nombre}}</h1>
+		</div>
+		<ul class="logoFabricante">
+		{% for f in lista_fabricantes %}
+				{% if f.logo %}
+					<li><a href="{{f.nombre}}"><img src="{{f.logo.url}}" class="marca" /></a></li>
+				{% endif %}
+		{% endfor %}
+		</ul>
+		{% for c in lista_vehiculos %}
+		<div class="container">
+			<div class="row">
+				{% if forloop.counter|divisibleby:"2"  %}
+					<div class="col-md-6"><img src="{{c.foto.url}}" class="coche" /></div>
+					<div class="col-md-6">
+						<table class="datos">
+							<tr>
+								<td><img src="{{c.id_fabricante.logo.url}}" class="marcaCoche" /></td>
+								<td><h1>{{c.id_fabricante.nombre}}</h1></td>
+							</tr>
+							<tr>
+								<td><h2>{{c.nombre}}</h2></td>
+								<td><h2>{{c.anyo_salida}}</h2></td>
+							</tr>
+							<tr>
+								<td><h3>{{c.n_asientos}} Asientos</h3></td>
+								<td><h3>{{c.n_puertas}} Puertas</h3></td>
+							</tr>
+							<tr>
+								<td colspan="2"><h4>{{c.precio}} €</h4></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<a href="../personalizacion/{{c.pk}}" class="btn btn-default boton">Configúralo</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				{% else %}
+					<div class="col-md-6">
+						<table class="datos">
+							<tr>
+								<td><img src="{{c.id_fabricante.logo.url}}" class="marcaCoche" /></td>
+								<td><h1>{{c.id_fabricante.nombre}}</h1></td>
+							</tr>
+							<tr>
+								<td><h2>{{c.nombre}}</h2></td>
+								<td><h2>{{c.anyo_salida}}</h2></td>
+							</tr>
+							<tr>
+								<td><h3>{{c.n_asientos}} Asientos</h3></td>
+								<td><h3>{{c.n_puertas}} Puertas</h3></td>
+							</tr>
+							<tr>
+								<td colspan="2"><h4>{{c.precio}} €</h4></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<a href="../personalizacion/{{c.pk}}" class="btn btn-default boton">Configúralo</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-6"><img src="{{c.foto.url}}" class="cocheI" /></div>
+
+				{%endif%}
+			</div>
+		</div>
+		<hr>
+		{% endfor %}
+
+
+{% endblock %}

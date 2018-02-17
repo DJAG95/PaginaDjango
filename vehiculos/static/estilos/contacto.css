@@ -1,0 +1,19 @@
+.titulo{
+	color: #333;
+	text-align: center;
+	margin-top: 5%;
+}
+.contenido{
+	color: black;
+}
+.botones{
+	float: right;
+}
+.btn{
+	background-color: #333;
+	color: white;
+}
+.mapa{
+	margin-top: 15%;
+	border-radius:  20px;
+}

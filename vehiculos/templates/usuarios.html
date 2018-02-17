@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	{%load staticfiles %}
+	<meta charset="UTF-8">
+	<title>Usuarios de la web</title>
+	<link rel="stylesheet" href="{% static 'estilos/usuarios.css' %}">
+</head>
+<body>
+	
+	<center>
+	<h1>Usuarios de Round-Robin</h1>
+	<table>
+		<tr>
+			<th>Foto</th>
+			<th>Dni</th>
+			<th>Nombre</th>
+			<th>Apellidos</th>
+			<th>Edad</th>
+			<th>Correo</th>
+		</tr>
+		
+		{% for u in lista_usuarios %}
+		<tr>
+			<td>
+				{% if u.foto %}
+					<img src="{{u.foto.url}}" class="perfil" />
+				{% endif %}
+			</td>
+			<td>{{u.dni}}</td>
+			<td>{{u.nombre}}</td>
+			<td>{{u.apellidos}}</td>
+			<td>{{u.edad}}</td>
+			<td>{{u.correo}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

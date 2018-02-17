@@ -1,0 +1,47 @@
+.contenido{
+	text-align: center;
+	width: 100%;
+}
+.datos table{
+	width: 100%;
+}
+.datos{
+	padding: 2%;
+	color: #333;
+	background-color: #fff;
+	border-radius: 10px;
+}
+.datos td{
+	padding: 2%;
+}
+.perfil{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+.direcciones table{
+	margin-top: 5%;
+	width: 100%;
+}
+.contenido{
+	vertical-align: middle;
+	text-align: center;
+	margin-top: 2%;
+}
+.tituloverde{
+	padding: 3%;
+	color: white;
+	background-color: #558668;
+}
+.boton, .botonCoche{
+	color: white;
+	background-color: #333;
+}
+.boton{
+	float: right;
+	
+}
+.informacion{
+	margin-top: 5%;
+}
+

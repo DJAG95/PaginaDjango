@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block head %}
+	{%load staticfiles %}
+	<link rel="stylesheet" href="{% static 'estilos/ejemplarUsuario.css' %}">
+	<link rel="stylesheet" href="{% static 'estilos/ventanaModal.css' %}">
+	
+{% endblock %}
+{% block cuerpo %}
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Yes, funciona</p>
+  </div>
+</div>
+
+</div>
+		<div class="tituloverde">
+			<h1>Ejemplares de {{usuario.nombre}} {{usuario.apellidos}}</h1>		
+		</div>
+		{% for c in lista_vehiculos %}
+		<div class="container datos">
+			<div class="row">
+				{% if forloop.counter|divisibleby:"2"  %}
+					<div class="col-md-6"><img src="{{c.ejemplar.vehiculo.foto.url}}" class="coche" /></div>
+					<div class="col-md-6">
+						<table class="datos">
+							<tr>
+								<td><img src="{{c.ejemplar.vehiculo.id_fabricante.logo.url}}" class="marcaCoche" /></td>
+								<td><h1>{{c.ejemplar.vehiculo.id_fabricante.nombre}}</h1></td>
+							</tr>
+							<tr>
+								<td><h2>{{c.ejemplar.vehiculo.nombre}}</h2></td>
+								<td><h2>{{c.ejemplar.vehiculo.anyo_salida}}</h2></td>
+							</tr>
+							<tr>
+								<td><h3>Color: {{c.ejemplar.color}}</h3></td>
+								<td><h3>Paquete: {{c.ejemplar.tipo_paquete}}</h3></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<button onclick="compartir({{c.ejemplar.id}})" class="btn btn-default boton">Compartir con otro usuario</button>
+								</td>
+							</tr>
+						</table>
+					</div>
+				{% else %}
+					<div class="col-md-6">
+						<table class="datos">
+							<tr>
+								<td><img src="{{c.ejemplar.vehiculo.id_fabricante.logo.url}}" class="marcaCoche" /></td>
+								<td><h1>{{c.ejemplar.vehiculo.id_fabricante.nombre}}</h1></td>
+							</tr>
+							<tr>
+								<td><h2>{{c.ejemplar.vehiculo.nombre}}</h2></td>
+								<td><h2>{{c.ejemplar.vehiculo.anyo_salida}}</h2></td>
+							</tr>
+							<tr>
+								<td><h3>Color: {{c.ejemplar.color}}</h3></td>
+								<td><h3>Paquete: {{c.ejemplar.tipo_paquete}}</h3></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<button onclick="compartir()" class="btn btn-default boton">Compartir con otro usuario</button>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="col-md-6"><img src="{{c.ejemplar.vehiculo.foto.url}}" class="cocheI" /></div>
+				{%endif%}
+			</div>
+		</div>
+		<hr>
+		{% endfor %}
+		<script src="{% static 'js/ventanaModal.js' %}"></script>
+{% endblock %}

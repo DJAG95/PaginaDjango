@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block head %}
+	{%load staticfiles %}
+	<link rel="stylesheet" href="{% static 'estilos/ventajas.css' %}">
+			
+{% endblock %}
+
+{% block cuerpo %}
+<div class="contenido">
+	
+
+<div class="introduccion">
+	<h1>Ventajas de usar un vehículo eléctrico</h1>
+</div>
+<div class="container">
+	<img src="{% static 'img/banner_ventajas.png' %}" class="banner" alt="banner_ventajas">
+</div>
+<div class="container-fluid postintroduccion">
+	<h1>Ventajas en 3 tablas</h1>
+	<p>En esta sección, encontrarás una serie de tablas que comparar modelos eléctricos con térmicos. Descubre las diferencias en los 3 puntos clave</p>
+</div>
+
+<div class="container-fluid seccion">
+	<h1>Consumo</h1>
+	<img src="{% static 'img/consumo.png' %}" alt="">
+	<p class="leyendaTabla">
+		Eléctrico -> Renault ZOE 40  |  Diesel -> Seat Leon 1.6 TDI CR 115 CV  |  Gasolina -> Seat Leon 1.2 TSI 110 CV
+	</p>
+</div>
+
+
+<div class="container-fluid seccion">
+	<h1>Mantenimiento</h1>
+	<img src="{% static 'img/mantenimiento.png' %}" alt="">
+	<p class="leyendaTabla">
+		Informe sobre los coches más fiables 
+		<a href="https://www.ocu.org/-/media/ocu/images/paper%20publications/ocucompra%20maestra/2014/389/los%20coches%20mas%20fiables/reference/los%20coches%20mas%20fiables/fiabilidadcoches%20(cm389_febrero2014)%20pdf.pdf?la=es-es">(Ocu 2014)</a>
+	</p>
+	<p class="leyendaTabla">
+		Mantenimiento de un coche eléctrico frente al de un coche térmico 
+		<a href="https://corrienteelectrica.renault.es/comparativa-mantenimiento-coche-electrico-frente-coche-termico/">(Renault)</a>
+	</p>
+</div>
+
+<div class="container-fluid seccion">
+	<h1>Emisiones</h1>
+	<img src="{% static 'img/emisiones.png' %}" alt="">
+	<p class="leyendaTabla">
+		El transporte personal en España: a cada habitante del país le corresponde, de media, un recorrido de 28,9 Km/persona/día en coche <a href="http://www.ecologistasenaccion.org/IMG/pdf/info_cuentas-ecologicas.pdf">[PDF]</a>
+	</p>
+		
+	<p class="leyendaTabla">
+		CO2 emitido en la producción de electricidad en España <a href="http://www.ree.es/sites/default/files/11_PUBLICACIONES/Documentos/InformesSistemaElectrico/2016/inf_sis_elec_ree_2016.pdf">[PDF]</a>
+	</p>
+</div>
+<div class="container seccion contaminante">
+	<h1>¿El coche eléctrico no contamina?</h1>
+
+	<p>Existen muchas opiniones en este ámbito y aunque la mayoría suelen ser ciertas, el problema está en el uso y contexto que se hacen de ellas. Aquí encontrarás aclaraciones sobre lo que es y lo que no es correcto:</p>
+
+	<p>El primer hecho irrefutable es que el coche eléctrico no emite gases en su funcionamiento. Por desplazarnos con él no emitimos al aire ningún tipo de gas contaminante ni de efecto invernadero, mientras que los coches térmicos queman combustible y generan emisiones contaminantes.</p>
+
+
+	<p>El segundo hecho siempre depende de las circunstancias. Nos referimos aquí a la huella de carbono, ya que el coche eléctrico utiliza electricidad para propulsarse y esta puede generarse de multitud de maneras.
+	Considerando que un usuario conectará su vehículo a la red eléctrica, estaría emitiendo indirectamente 246,4Kg de CO2 para recorrer la distancia típica anual en España (10.548,5Km/Año/Persona), debido a las emisiones de las plantas que producen la electricidad en España.
+	Si este mismo usuario no utiliza la red eléctrica española y carga su vehículo con paneles solares y baterías instalados en casa, estaría contribuyendo con 0,0Kg de CO2.</p>
+
+	<p>El tercer hecho y el más importante es que los coches térmicos (especialmente Diesel) en su proceso de combustión generan más de 4 tipos de gases distintos, fijando nuestra atención en las micropartículas en suspensión, o PM. Las de 2.5 micras de tamaño, también llamadas PM 2.5 son las que nos causan los problemas más graves de salud. Aunque el coche eléctrico contribuya con 246,4Kg de CO2 no nos mata ni aunque los respiremos.</p>
+
+	<p>Que no te asusten con cifras, el CO2 lo produces al exhalar aire después del proceso respiratorio y es un gas de efecto invernadero. Al respirar las PM2.5 estas pasan del aire hasta la sangre y producen numerosas enfermedades cardiorespiratorias, así como cáncer. Esto es lo que nos mata lentamente.</p>
+
+	<p>Reducir de 1.202,53Kg a 246,4Kg de CO2 emitidos ya es un logro. Reducir la emisión de PM2.5, PM10 y NO2 a 0,0Kg es la meta.</p>
+
+</div>
+
+
+</div>
+{% endblock %}

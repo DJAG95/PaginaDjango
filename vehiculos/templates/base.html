@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{%load staticfiles %}
+	<meta charset="UTF-8">
+	<title>Round Robin</title>
+	<link rel="icon" href="{% static 'img\blanco.png' %}" type="image/gif" sizes="16x16">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="{% static 'js/bootstrap' %}"></script>
+	<link rel="stylesheet" href="{% static 'estilos/base.css' %}">
+	{% block head %}
+
+	{% endblock %}
+</head>
+<body>
+	<nav class="menu">
+		<ul class="logo">
+			<img src="{% static 'img\blanco.png' %}" alt="logo">
+			<li><a href="/vehiculos\index">Inicio</a></li>
+			<li><a href="/vehiculos\ventajas">Ventajas</a></li>
+			<li><a href="/vehiculos\concesionario">Concesionario</a></li>
+			<li><a href="/vehiculos\contacto">Contacto</a></li>
+			{% if user.is_authenticated %}
+				<li class="inicioS"><a href="/vehiculos\logout">Logout</a></li>
+				<li class="inicioS"><a href="/vehiculos\perfil">{{ user.username }}</a></li>
+			{% else %}
+				<li class="inicioS"><a href="/vehiculos\login">Login</a></li>
+				<li class="inicioS"><a href="/vehiculos\registro">Registro</a></li>
+			{% endif %}
+		</ul>
+	</nav>
+	{% block cuerpo %}
+	{% endblock %}
+	<footer>
+		<div class="container-fluid pie">
+			<table class="Tpie">
+				<tr>
+					<td>Copyrigth Round Robin - 2018 - Todos los derechos reservados</td>
+				</tr>
+				<tr>
+					<td>Contácta con nosotros<img src="{% static 'img/resources/gmail.png' %}" alt="Logo de Gmail"><img src="{% static 'img/resources/youtube.png' %}" alt="Logo de youtube"></td>
+				</tr>
+			</table>
+		</div>
+	</footer>
+</body>
+</html>

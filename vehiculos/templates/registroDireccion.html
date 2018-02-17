@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block head %}
+	{%load staticfiles %}
+	<link rel="stylesheet" href="{% static 'estilos/css/registro.css' %}">
+			
+{% endblock %}
+
+{% block cuerpo %}
+	<div class="container formulario">
+		<h1>Registro</h1>
+
+		<form method="post" class="form-control">
+			{% csrf_token %}
+				{{form|crispy}}
+			<input type="submit" value="Enviar" class="btn btn-default boton">
+		</form>
+	</div>
+{% endblock %}

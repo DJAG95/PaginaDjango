@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% block head %}
+	{%load staticfiles %}
+	<link rel="stylesheet" href="{% static 'estilos/index.css' %}">
+			
+{% endblock %}
+
+{% block cuerpo %}
+	<section>
+		<div class="container-fluid cabecera">
+			<table class="tablaCabecera">
+				<tr>
+					<td>
+						<img src="{% static 'img\blanco.png' %}" alt="Logo principal de Round-Robin.com" class="bienvenida3">
+					</td>
+					<td>
+						<h1>Round-Robin.com</h1>
+						<h2>Fomentando la movilidad electrica</h2>
+
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+		<div class="container secciones">
+		<h1>Ventajas y desventajas</h1>
+		<div class="row criptomonedas">
+			<div class="col-md-4">
+				<img src="{% static 'img\ventajas.png' %}" alt="" class="simagen">
+			</div>
+			<div class="col-md-8 descrip">
+				<p>Aquí podrás encontrar información sobre las distintas ventajas y desventajas que proporciona un coche eléctrico sobre uno termico, entre las más destacadas, podremos encontrar una comparación exhaustiva sobre los gatos que acarrean mantener un vehículo eléctrico frente a uno termico</p>
+			</div>
+		</div>
+		<hr>
+		<h1>Concesionario</h1>
+
+		<div class="row metodosPago">
+
+			<div class="col-md-8 descrip">
+			<p>
+				Ahora, por cada coche eléctrico adquirido en nuestra web, dispondrás de hasta un 4% de descuento 	acumulable hasta un 10%¿Que pasa si comparto coche con algún otro usuario?
+				<br>
+				<br>
+
+
+				Dispondrás del porcentaje correspondiente de descuento
+				<br>
+				<br>
+
+				verbigracia:
+				Si obteneis un Tesla Model S entre 2 usuarios, dispondreis de un 2% de descuento cada uno, si por tu cuenta compras otro coche (Model X), dispondrás de un 6% de descuento.
+				<br>
+				<br>
+				
+
+				Compare, elija, personalice y compre su electrico aquí, un espacio completo donde se exponen las diferentes marcas que proporcionan coches eléctricos y sus diferentes modelos</p>
+			</div>
+			<div class="col-md-4 simagen">
+				<img src="{% static 'img\concesionario.png' %}" alt="" class="simagen">
+			</div>
+		</div>
+		<hr>
+		<h1>Puntos de carga</h1>
+
+		<div class="row foro">
+			<div class="col-md-4 simagen">
+				<img src="{% static 'img\puntosCarga.png' %}" alt="" class="simagen">
+			</div>
+			<div class="col-md-8 descrip">
+				<p>una vez tengas un coche electrico, ¿Donde lo cargo? esta es una de las dudas más frecuentes que nops rondan la cabeza cuando nos planteamos migrar a la movilidad electrica, en este apartado disponemos de un mapa donde se expecificarán los puntos de carga, estos se actualizan mediante la aplicación Electromaps, a través de ella puedes acceder a muchos puntos de carga y si falta alguno, añadirlo tu mismo</p>
+			</div>
+		</div>
+		<hr>
+		<h1>Contacto</h1>
+
+		<div class="row descargar">
+
+			<div class="col-md-8 descrip">
+				<p>¿Tienes alguna duda?, ¿no existe el color del modelo de coche que andas buscando? o simplemente ¿has olvidado tu contraseña?, hay habilitada una sección de contacto en nuestra web, el cual podrás enviarnos tus dudas e inquietudes a través del apartado contacto, las responderemos con la mayor brevedad posible</p>
+			</div>
+			<div class="col-md-4 simagen">
+				<img src="{% static 'img\contacto.png' %}" alt="" class="simagen">
+			</div>
+		</div>
+	</section>
+{% endblock %}

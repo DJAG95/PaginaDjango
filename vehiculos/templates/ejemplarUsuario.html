@@ -1,20 +1,37 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
+
 {% block head %}
 	{%load staticfiles %}
 	<link rel="stylesheet" href="{% static 'estilos/ejemplarUsuario.css' %}">
 	<link rel="stylesheet" href="{% static 'estilos/ventanaModal.css' %}">
-	
+
 {% endblock %}
 {% block cuerpo %}
 
+
+
 <div id="myModal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Yes, funciona</p>
+    <div class="modal-header">
+      <h2>¿Con quien desea compartir su vehículo?</h2>
+      <span class="close">&times;</span>
+    </div>
+    <div class="modal-body">
+      <form action="" method="post">
+	    	{% csrf_token %}
+			{{ form|crispy }}
+			<div id="formComplete">
+				PARTE DEL FORM A SUSTITUIR
+			</div>
+	    </form>
+    </div>
   </div>
 </div>
 
-</div>
+
+
+
 		<div class="tituloverde">
 			<h1>Ejemplares de {{usuario.nombre}} {{usuario.apellidos}}</h1>		
 		</div>
@@ -61,7 +78,7 @@
 							</tr>
 							<tr>
 								<td colspan="2">
-									<button onclick="compartir()" class="btn btn-default boton">Compartir con otro usuario</button>
+									<button onclick="compartir({{c.ejemplar.id}})" class="btn btn-default boton">Compartir con otro usuario</button>
 								</td>
 							</tr>
 						</table>

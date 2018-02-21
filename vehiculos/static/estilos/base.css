@@ -11,10 +11,12 @@ html {
 	padding: 0;
 	margin: 0;
 }
+
 body{
+	font-size: 15px;
 	position: relative;
   	margin: 0;
-  	padding-bottom: 20rem;
+  	padding-bottom: 30rem;
   	min-height: 100%;
   	font-family: 'Roboto';
 	background-color: rgb(230,230,230);
@@ -32,13 +34,13 @@ body{
 	text-align: center;
 }
 .menu a{
-
+	font-size: 15px;
 	text-decoration: none;
 	color: white;
 }
 .menu li:hover{
 	cursor: pointer;
-	background-color: #004020;
+	background-color: #008040;
 	
 }
 .logo img{
@@ -79,8 +81,73 @@ body{
 .inicioS{
 	float: right;
 }
+
+
+/* footer */
+
 footer{
 	width: 100%;
  	position: absolute;
  	bottom: 0;
+ }
+footer.nb-footer {
+	background: #222;
+	border-top: 4px solid #006020; 
+}
+footer.nb-footer .about {
+	margin: 0 auto;
+	max-width: 1170px;
+	text-align: center; 
+}
+footer.nb-footer .about p {
+	font-size: 13px;
+	color: #999;
+	margin-top: 10px; 
+}
+footer.nb-footer .about .social-media {
+	margin-top: 15px; 
+}
+footer.nb-footer .about .social-media ul li a {
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 50%;
+	font-size: 16px;
+	color: #008040;
+	border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+footer.nb-footer .about .social-media ul li a:hover {
+	background: #008040;
+	color: white;
+	border-color: white; 
+}
+footer.nb-footer .copyright {
+	margin-top: 15px;
+	background: #111;
+	padding: 7px 0;
+	color: #999; 
+}
+footer.nb-footer .copyright p {
+	margin: 0;
+	padding: 0; 
+}
+.list-inline li{
+	display: inline;
+}
+
+/* Mensajes Web */
+.success{
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	padding: 0.5%;
+	background-color: #008040;
+}
+.error{
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	padding: 0.5%;
+	background-color: #802222;
 }

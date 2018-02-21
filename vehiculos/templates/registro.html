@@ -11,7 +11,7 @@
 	<div class="container formulario">
 		<h1>Registro</h1>
 
-		<form method="post" class="form-control">
+		<form method="post" class="form-control" enctype='multipart/form-data'>
 			{% csrf_token %}
 				{{form|crispy}}
 			<input type="submit" value="Enviar" class="btn btn-default boton">

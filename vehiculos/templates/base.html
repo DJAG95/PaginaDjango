@@ -4,6 +4,13 @@
 	{%load staticfiles %}
 	<meta charset="UTF-8">
 	<title>Round Robin</title>
+
+
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link href='//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
+
+
 	<link rel="icon" href="{% static 'img\blanco.png' %}" type="image/gif" sizes="16x16">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -30,19 +37,45 @@
 			{% endif %}
 		</ul>
 	</nav>
+
+	{% if messages %}
+	<div>
+		{% for message in messages %}
+		<p {% if message.tags %} class=" {{ message.tags }}"{% endif %}>{{ message }}</p>
+		{% endfor %}
+	</div>
+	{% endif %}
+
 	{% block cuerpo %}
 	{% endblock %}
-	<footer>
-		<div class="container-fluid pie">
-			<table class="Tpie">
-				<tr>
-					<td>Copyrigth Round Robin - 2018 - Todos los derechos reservados</td>
-				</tr>
-				<tr>
-					<td>Contácta con nosotros<img src="{% static 'img/resources/gmail.png' %}" alt="Logo de Gmail"><img src="{% static 'img/resources/youtube.png' %}" alt="Logo de youtube"></td>
-				</tr>
-			</table>
+	<footer class="nb-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="about">
+						<img src="images/logo.png" class="img-responsive center-block" alt="">
+						<p>Persiguiendo el sueño de un mundo más limpio y sostenible, si quieres unirte a la comunidad Round-Robin, puedes participar con nosotros a través de nuestras redes sociales, o acudir a nuestros eventos organizados a traves de Meetup sobre movilidad eléctrica</p>
+
+						<div class="social-media">
+							<ul class="list-inline">
+								<li><a href="https://github.com/DJAG95" title=""><i class="fa fa-github"></i></a></li>
+								<li><a href="https://twitter.com/DaniAlvarezGo" title=""><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://plus.google.com/u/2/102064541869019104977" title=""><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="https://www.linkedin.com/in/danieljesusalvarezgonzalez/" title=""><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</footer>
+		<section class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<p>Copyright © 2018. AlvareTech</p>
+					</div>
+				</div>
+			</section>
+		</footer>
 </body>
 </html>

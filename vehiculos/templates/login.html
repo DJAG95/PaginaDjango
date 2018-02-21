@@ -7,10 +7,10 @@
 {% block cuerpo %}
 <div class="container">
   <div class="row">
-  	<form action="{% url 'InicioSesion' %}" method="post">
+  	<form action="{% url 'InicioSesion' %}" method="post" class="logincentro">
   		{% csrf_token %}
   		{{ form|crispy }}
-    	<input type="submit" value="enviar">
+    	<input type="submit" class="btn btn-default" value="enviar">
     </form>
   </div>
 </div>

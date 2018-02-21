@@ -1,0 +1,14 @@
+.logincentro{
+	font-weight: bold;
+	color: white;
+	text-shadow: 2px 2px black;
+	font-size: 20px;
+	margin: 10%;
+	margin-left: 40%;
+}
+.logincentro input{
+	width: 100%;
+}
+body{
+	background-image: url('../img/fondoLogin.jpg');
+}

@@ -1,4 +1,4 @@
-// Abre el modal
+//Hace referencia al Div que va a enseñar
 var modal = document.getElementById('myModal');
 
 // Selecciona el botón que abre la ventana modal
@@ -9,6 +9,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // Abrir modal
 function compartir(ejemplar) {
+	document.getElementById("formComplete").innerHTML = "<input type='hidden' name='id_ejemplar' value="+ejemplar+"><input type='submit' class='btn btn-default' value='Confirmar'>";
     modal.style.display = "block";
 }
 
